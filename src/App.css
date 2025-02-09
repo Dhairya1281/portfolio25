@@ -1,0 +1,22 @@
+/* App.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the App fills the viewport height */
+  }
+  
+  main {
+    flex: 1; /* This makes the content area expand to fill the remaining space */
+  }
+  
+  footer {
+    margin-top: auto; /* Push footer to the bottom */
+  }
+  

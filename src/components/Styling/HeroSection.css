@@ -1,0 +1,196 @@
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: calc(100vh - 80px); /* Full height minus navbar height */
+  background: #ffffff;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  margin-top: 80px; /* Add margin to account for the fixed navbar */
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between; /* Distribute space between content */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Center and limit width */
+  gap: 2rem; /* Add spacing between items */
+  margin: 0 auto; /* Center the content container */
+}
+
+.content {
+  flex: 2;
+  max-width: 100%; /* Restricts text width for better readability */
+}
+
+.content h1 {
+  font-size: 3.5rem; /* Adjust font size for larger screens */
+  color: #333;
+  margin: 0;
+}
+
+.content h1 span {
+  color: #F2AA06; /* Highlighted color for the name */
+}
+
+.content p {
+  font-size: 1.2rem; /* Increase font size for better readability */
+  color: #555;
+  margin: 1.5rem 0;
+  line-height: 1.8; /* Improve readability */
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem; /* Space between buttons */
+  margin-top: 2rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 28px; /* Adjust button size */
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #F2AA06;
+  color: white;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid #F2AA06;
+  color: #F2AA06;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: scale(1.05); /* Add subtle hover effect */
+}
+
+/* Profile Image */
+.photo-container {
+  flex: 1.5; /* Increase flex to make photo larger */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 400px; /* Increase max width */
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Responsive Styles */
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media (max-width: 1024px) {
+  .hero {
+    height: calc(100vh - 70px); /* Adjust height to make space for the navbar */
+    margin-top: 70px; /* Adjust margin to make space for the navbar */
+  }
+
+  .hero-content {
+    flex-wrap: wrap; /* Allow wrapping on medium devices */
+    justify-content: center; /* Center align content */
+    gap: 2rem;
+  }
+
+  .content {
+    text-align: center; /* Center text for better visibility */
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  .content p {
+    font-size: 1.3rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .profile-photo {
+    max-width: 300px;
+  }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+  .hero {
+    height: calc(100vh - 60px); /* Adjust height to make space for the navbar */
+    margin-top: 60px; /* Adjust margin to make space for the navbar */
+  }
+
+  .hero-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    gap: 2rem;
+  }
+
+  .content {
+    text-align: center; /* Center text alignment */
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 1rem;
+  }
+
+  .profile-photo {
+    max-width: 250px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .hero {
+    height: calc(100vh - 50px); /* Adjust height to make space for the navbar */
+    margin-top: 50px; /* Adjust margin to make space for the navbar */
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+  }
+
+  .buttons .primary-btn,
+  .buttons .secondary-btn {
+    width: 100%; /* Full-width buttons for small devices */
+    padding: 15px 0; /* Adjust padding for better touch interaction */
+  
+  }
+}

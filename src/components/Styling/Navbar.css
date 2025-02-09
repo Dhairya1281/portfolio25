@@ -1,0 +1,245 @@
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Navbar Container (Inside Flexbox) */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin-left: 10px;
+  width: 65px; /* Default width for larger screens */
+  height: auto;
+  border-radius: 15%;
+  object-fit: cover;
+  transition: all 0.3s ease; /* Smooth transition for size changes */
+}
+
+/* Adjust logo for tablets */
+@media (max-width: 768px) {
+  .logo {
+    width: 55px; /* Slightly smaller on tablets */
+    font-size: 1.2rem;
+    margin-left: 8px;
+  }
+}
+
+/* Adjust logo for mobile screens */
+@media (max-width: 480px) {
+  .logo {
+    width: 45px; /* Smaller size for mobile devices */
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+}
+
+/* Dropdown Toggle Button */
+.dropdown-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative; /* Add this to control position */
+}
+
+.dropdown-toggle .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-toggle .line.open:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.dropdown-toggle .line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.dropdown-toggle .line.open:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #0a0a0a;
+  padding: 15px 0;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  list-style: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.dropdown-item .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+/* Add hover effect */
+.dropdown-item .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F2AA06;
+  transition: width 0.3s ease;
+}
+
+.dropdown-item .nav-link:hover {
+  color: #F2AA06;
+  transform: translateY(-2px);
+}
+
+.dropdown-item .nav-link:hover::after {
+  width: 100%;
+}
+
+.dropdown-item .nav-link.clicked {
+  color: #F2AA06;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold; /* Make nav links font bold */
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F2AA06;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #F2AA06;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.clicked {
+  color: #F2AA06;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    margin-right: 10px; /* Add some space to the right to ensure it stays within the screen */
+  }
+
+  .navbar {
+    height: 70px;
+    padding: 0 10px; /* Adjust padding to ensure no overflow */
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    width: 55px; /* Adjust logo size uniformly */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 10px;
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 1rem;
+    width: 45px; /* Adjust logo size uniformly */
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .dropdown-item {
+    margin: 10px 0;
+  }
+
+  .dropdown-toggle {
+    margin-right: 5px; /* Adjust the margin to keep the button within screen */
+  }
+}

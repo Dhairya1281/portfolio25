@@ -1,0 +1,178 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: #ffffff;
+    padding: 40px;
+    max-width: 600px; /* Adjust max-width for larger screens */
+    width: 90%;
+    border-radius: 20px; /* Increased border-radius */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .modal-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between; /* Space between logo, heading and close button */
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #000000;
+    position: absolute; /* Make the heading centered */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s ease;
+    text-align: center;
+  }
+  
+  .modal-body .contact-item {
+    display: flex;
+    justify-content: center; /* Center-align contact items */
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .contact-item p {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-item p:hover {
+    color: #0073e6; /* Hover effect for contact text */
+  }
+  
+  .contact-icon {
+    margin-right: 10px;
+    color: #0073e6;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-icon:hover {
+    transform: scale(1.1); /* Hover effect for icons */
+  }
+  
+  .modal-content p {
+    color: #666666;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .modal-content a {
+    color: #0073e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .modal-content a:hover {
+    color: #005bb5; /* Hover effect for links */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666666;
+    transition: color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    color: #000000; /* Hover effect for close button */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .modal {
+      padding: 30px;
+    }
+  
+    .modal-header h2 {
+      font-size: 22px;
+    }
+  
+    .modal-content p {
+      font-size: 14px;
+    }
+  
+    .modal-content a {
+      font-size: 14px;
+    }
+  
+    .contact-icon {
+      font-size: 18px;
+    }
+  
+    .close-btn {
+      font-size: 20px;
+    }
+  
+    .modal-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal {
+      padding: 20px;
+      max-width: 100%; /* Ensure modal is responsive */
+      width: 90%;
+      height: auto;
+      border-radius: 20px;
+    }
+  
+    .modal-header h2 {
+      font-size: 20px;
+    }
+  
+    .modal-content p {
+      font-size: 14px;
+    }
+  
+    .modal-content a {
+      font-size: 14px;
+    }
+  
+    .contact-icon {
+      font-size: 16px;
+    }
+  
+    .close-btn {
+      font-size: 18px;
+    }
+  
+    .modal-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
