@@ -148,67 +148,21 @@ const AboutSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 1 }}
           >
-            I'm <span>Dhairya Gulati</span>, a passionate Frontend Developer based in Panchkula, Haryana. With a
-            strong foundation in <span>Electronics and Communication Engineering</span>, I specialize in crafting
-            modern, responsive web applications using <span>ReactJS</span>, <span>JavaScript</span>, <span>HTML</span>, 
-            and <span>CSS</span>. I love solving problems, enhancing user experiences, and creating visually appealing
-            and efficient solutions for the web.
+           <p>
+  I am <span>Dhairya Gulati</span>, a passionate <span>Frontend Developer</span> and recent graduate with a <span>B.Tech in Electronics and Communication Engineering</span>, majoring in <span>Embedded Systems</span> from <span>Punjab Engineering College (2024)</span>. With a solid foundation in <span>Frontend Development</span> using <span>ReactJS</span>, <span>JavaScript</span>, <span>HTML</span>, <span>CSS</span>, and <span>BootStrap</span>, I specialize in creating <span>modern, responsive, and high-performance web applications</span>.
+</p>
+
+<p>
+  My expertise lies in building <span>modern, responsive</span>, and <span>high-performance web applications</span> while focusing on delivering <span>seamless user experiences</span>. I optimize performance and craft visually engaging interfaces that aim to create significant impact.
+</p>
+
+<p>
+  Always eager to learn, I constantly explore new technologies and best practices. I thrive on <span>solving complex challenges</span> and transforming ideas into reality through <span>clean, efficient, and scalable code</span>.
+</p>
+
           </motion.p>
         </div>
-        <div className="skills-container">
-          <motion.h2
-            className="skills-title"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            MY SKILLS
-          </motion.h2>
-          <div className="skills-grid">
-            <motion.div
-              className="skill-card"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <h4>Frontend Development</h4>
-            </motion.div>
-            <motion.div
-              className="skill-card"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <h4>ReactJS</h4>
-            </motion.div>
-            <motion.div
-              className="skill-card"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <h4>JavaScript</h4>
-            </motion.div>
-            <motion.div
-              className="skill-card"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <h4>HTML & CSS</h4>
-            </motion.div>
-            <motion.div
-              className="skill-card"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <h4>Bootstrap</h4>
-            </motion.div>
-            <motion.div
-              className="skill-card"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <h4>Leadership</h4>
-            </motion.div>
-          </div>
-        </div>
+       
       </div>
     </motion.section>
   );

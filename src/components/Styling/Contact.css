@@ -8,10 +8,9 @@
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #333;
-  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }
 
 .contact-form {
@@ -44,7 +43,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #007bff;
+  border-color: #F2AA06;
   background-color: #fff;
 }
 
@@ -55,7 +54,7 @@
 .submit-btn {
   padding: 12px 25px;
   font-size: 1rem;
-  background-color: #007bff;
+  background-color: #F2AA06;
   color: white;
   border: none;
   border-radius: 6px;
@@ -64,8 +63,8 @@
 }
 
 .submit-btn:hover {
-  background-color: #0056b3;
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  background-color: #ab6900;
+  box-shadow: 0 5px 15px rgba(255, 215, 96, 0.773);
 }
 
 .submit-btn:active {

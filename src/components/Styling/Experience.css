@@ -1,5 +1,5 @@
 .experience-section {
-    background: #f8f9fa; /* Light grey background for professional feel */
+    background: #ffffff; /* Light grey background for professional feel */
     color: #000000;
     padding: 4rem 2rem;
     font-family: "Arial", sans-serif;
@@ -26,6 +26,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
+    text-align: left;
   }
   
   .experience-card:hover {

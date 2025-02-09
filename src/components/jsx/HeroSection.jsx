@@ -50,7 +50,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            Based in Panchkula, India, I specialize in crafting modern, responsive web applications using ReactJS, JavaScript, and CSS.
+            Building high-performance, user-centric web applications with ReactJS, JavaScript, and modern front-end technologies.
           </motion.p>
           <motion.div
             className="buttons"
@@ -66,13 +66,18 @@ const HeroSection = () => {
             >
               Let's Connect
             </motion.button>
-            <motion.button
-              className="secondary-btn"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              View My Work
-            </motion.button>
+            <motion.a
+  href="https://drive.google.com/file/d/1wpg8UQ7L2-ZphpfL4Ej1UFJlvjXtZX57/view?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="secondary-btn"
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.9 }}
+  style={{ textDecoration: "none" }} // Inline removal of underline
+>
+  My Resume
+</motion.a>
+
           </motion.div>
         </motion.div>
       </div>

@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from "react";
 import Navbar from "./components/jsx/Navbar";
 import HeroSection from "./components/jsx/HeroSection";
 import About from "./components/jsx/About";
+import Skills from "./components/jsx/Skills";
 import Portfolio from "./components/jsx/Portfolio";
 import Blog from "./components/jsx/Blog";
 import Contact from "./components/jsx/Contact";
@@ -11,10 +12,11 @@ import "./App.css"; // Ensure global styles are defined here
 
 const App = () => {
   useLayoutEffect(() => {
-    // Reset URL to #home and scroll to the top on page load
-    if (window.location.hash !== "#home") {
-      window.history.replaceState(null, null, "#home");
+    // Ensure the URL starts with `/#home` instead of incorrect `home#home`
+    if (!window.location.hash || window.location.hash !== "#home") {
+      window.history.replaceState(null, null, "/#home");
     }
+    
     // Scroll to the top of the page
     window.scrollTo({
       top: 0,
@@ -32,6 +34,9 @@ const App = () => {
         <section id="about">
           <About />
         </section>
+        <section id="skills">
+          <Skills />
+        </section>
         <section id="experience">
           <Experience />
         </section>
@@ -44,7 +49,6 @@ const App = () => {
         <section id="contact">
           <Contact />
         </section>
-        
       </main>
       <Footer />
     </div>

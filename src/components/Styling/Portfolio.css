@@ -1,3 +1,70 @@
+.publication-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  position: relative; /* Add relative positioning for button placement */
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+.section-title{
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  
+  color: #000000; /* Dark navy for titles */
+}
+.publication-header h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000000; /* Dark navy for titles */
+}
+
+.publication-header h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  color: #64748b; /* Subtle grey for company name */
+
+}
+.publication-link{
+  text-decoration: none;
+  color :#6b7280
+
+}
+
+.publication-date {
+  font-size: 0.9rem;
+  color: #6b7280; /* Muted grey for date */
+  margin: 0.5rem 0 1rem;
+}
+
+.publication-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.publication-details li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151; /* Neutral grey for text */
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: start;
+  gap: 0.8rem;
+}
+
+.publication-details li::before {
+  content: "•";
+  color: #000000; /* Blue bullet point */
+  font-size: 1.2rem;
+}
+
+
 .portfolio {
   padding: 60px 20px;
   background-color: #ffffff;
@@ -6,8 +73,8 @@
 }
 
 .portfolio-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   color: #000000;
   margin-bottom: 20px;
 }
@@ -16,6 +83,8 @@
   font-size: 1.1rem;
   color: #7f8c8d;
   margin-bottom: 40px;
+  
+  
 }
 
 .portfolio-grid {
@@ -46,16 +115,30 @@
 
 .project-details {
   padding: 20px;
+
 }
 
 .project-details h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color :#000000;
+
+}
+
+.project-link {
+  display: block;
+  text-decoration: none;
+
+}
+
+.project-link .project-card {
+  cursor: pointer;
 }
 
 .project-details p {
   font-size: 1rem;
   color: #7f8c8d;
+  text-align: left;
 }
 
 .project-card:hover {
