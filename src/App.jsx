@@ -27,6 +27,7 @@ const App = () => {
 
   return (
     <div className="App">
+      
       <Navbar />
       <main className="content">
         <section id="home">
@@ -52,6 +53,7 @@ const App = () => {
         </section>
       </main>
       <Footer />
+      <Analytics /> 
     </div>
   );
 };
