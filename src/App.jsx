@@ -9,6 +9,7 @@ import Contact from "./components/jsx/Contact";
 import Experience from "./components/jsx/Experience";
 import Footer from "./components/jsx/Footer";
 import "./App.css"; // Ensure global styles are defined here
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   useLayoutEffect(() => {
