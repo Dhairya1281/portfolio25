@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useEffect } from "react";
 import Navbar from "./components/jsx/Navbar";
 import HeroSection from "./components/jsx/HeroSection";
 import About from "./components/jsx/About";
@@ -9,7 +9,8 @@ import Contact from "./components/jsx/Contact";
 import Experience from "./components/jsx/Experience";
 import Footer from "./components/jsx/Footer";
 import "./App.css"; // Ensure global styles are defined here
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { initGA, logPageView } from "./utils/analytics"; // Import Google Analytics functions
 
 const App = () => {
   useLayoutEffect(() => {
@@ -25,9 +26,13 @@ const App = () => {
     });
   }, []);
 
+  useEffect(() => {
+    initGA();
+    logPageView();
+  }, []);
+
   return (
     <div className="App">
-      
       <Navbar />
       <main className="content">
         <section id="home">
@@ -53,7 +58,7 @@ const App = () => {
         </section>
       </main>
       <Footer />
-      <Analytics /> 
+      <Analytics />
     </div>
   );
 };
