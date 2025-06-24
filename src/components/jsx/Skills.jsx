@@ -29,13 +29,6 @@ const Skills = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <h4>Java</h4>
-      </motion.div>
-      <motion.div
-        className="skill-card"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
         <h4>JavaScript</h4>
       </motion.div>
       <motion.div
@@ -43,7 +36,14 @@ const Skills = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <h4>HTML & CSS</h4>
+        <h4>HTML</h4>
+      </motion.div>
+      <motion.div
+        className="skill-card"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <h4>CSS</h4>
       </motion.div>
       <motion.div
         className="skill-card"
